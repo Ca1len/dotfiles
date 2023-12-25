@@ -18,9 +18,8 @@ map("n", "<leader>Y", [["+Y]])
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Search and Replace" })
 
 -- Terminal
-
 local lazyterm = function()
-  Util.terminal(nil, { cwd = Util.root() })
+  Util.terminal(--[[ nil ]] "C:/Program Files/Git/bin/bash.exe", { cwd = Util.root() })
 end
 map("n", "<A-i>", lazyterm, { desc = "Terminal (root dir)" })
 map("t", "<A-i>", "<cmd>close<cr>", { desc = "Hide Terminal" })
