@@ -204,6 +204,7 @@ bindsym Print exec --no-startup-id flameshot gui
 
 
 # Change keyboard layout en/ru
+exec --no-startup-id ibus exit
 exec "setxkbmap -option grp:caps_toggle -option grp_led:caps us,ru"
 
 exec xrandr --refresh 120.00
