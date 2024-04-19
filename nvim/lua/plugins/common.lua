@@ -50,4 +50,24 @@ return {
       },
     },
   },
+  {
+    "huggingface/llm.nvim",
+    opts = {
+      model = "deepseek-coder:6.7b",
+      backend = "ollama",
+      url = "http://localhost:11434/api/generate",
+      accept_keymap = "<A-g>",
+      dismiss_keymap = "<A-r>",
+      lsp = {
+        bin_path = vim.api.nvim_call_function("stdpath", { "data" }) .. "/mason/bin/llm-ls.cmd",
+      },
+      request_body = {
+        role = "assistant",
+      },
+      tokenizer = {
+        repository = "deepseek-ai/deepseek-coder-6.7b-base",
+        api_token = "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",
+      },
+    },
+  },
 }

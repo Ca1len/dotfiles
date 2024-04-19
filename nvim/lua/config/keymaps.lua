@@ -19,7 +19,7 @@ map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { 
 
 -- Terminal
 local lazyterm = function()
-  Util.terminal(--[[ nil ]] --[[ "C:/Program Files/Git/bin/bash.exe" ]] "pwsh", { cwd = Util.root() })
+  Util.terminal(--[[ nil ]] "C:/Program Files/Git/bin/bash.exe", { cwd = Util.root() })
 end
 map("n", "<A-i>", lazyterm, { desc = "Terminal (root dir)" })
 map("t", "<A-i>", "<cmd>close<cr>", { desc = "Hide Terminal" })
@@ -33,6 +33,19 @@ map("n", "<leader>x", function()
   vim.cmd.bp()
   vim.cmd.bd(curr_buffer)
 end)
+
+-- DAP
+
+-- local dap = function()
+--   -- (Re-)reads launch.json if present
+--   if vim.fn.filereadable("./launch.json") then
+--     require("dap.ext.vscode").load_launchjs("./launch.json", { cpptools = { "c", "cpp" } })
+--   end
+--   print("123")
+--   require("dap").continue()
+-- end
+--
+-- map("n", "<F5>", dap, { desc = "DAP Continue" })
 
 -- Removes
 del("n", "<S-h>")
