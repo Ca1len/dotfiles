@@ -7,9 +7,5 @@ local opt = vim.opt
 opt.wrap = true
 
 opt.foldmethod = "expr"
-opt.foldtext = vim.treesitter.foldtext()
+opt.foldtext = "vim.treesitter.foldtext()"
 opt.foldlevel = 99
-
-local foo = function()
-  print(123)
-end
