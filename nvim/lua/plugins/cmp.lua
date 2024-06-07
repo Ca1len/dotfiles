@@ -1,5 +1,6 @@
 return {
   "hrsh7th/nvim-cmp",
+  dependencies = { "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
   ---@param opts cmp.ConfigSchema
   opts = function(_, opts)
     local has_words_before = function()
