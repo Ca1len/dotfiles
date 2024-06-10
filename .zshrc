@@ -103,3 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/home/andrewpershin/yandex-cloud/path.bash.inc' ]; then source '/home/andrewpershin/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/home/andrewpershin/yandex-cloud/completion.zsh.inc' ]; then source '/home/andrewpershin/yandex-cloud/completion.zsh.inc'; fi
+
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
