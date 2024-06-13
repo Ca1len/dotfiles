@@ -6,12 +6,13 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 3000,
+      timeout = 10000,
       level = 3,
       render = "minimal",
       stages = "static",
     },
   },
+  { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
