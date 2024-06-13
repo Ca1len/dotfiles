@@ -1,7 +1,7 @@
 return {
   {
     "akinsho/bufferline.nvim",
-    commit = "f4b4b980ce88d546aeb69d11463187c8f716a1a1",
+    commit = "d6cb9b7cac52887bcac65f8698e67479553c0748",
   },
   {
     "rcarriga/nvim-notify",
